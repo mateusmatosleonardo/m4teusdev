@@ -7,10 +7,6 @@ import Button from './components/Button';
 
 function App() {
 
-  function sendMessage() {
-    return <link rel="stylesheet" href="https://api.whatsapp.com/send?1=pt_BR&phone=5588981890344" />
-  }
-
   return (
     <S.Container>
       <S.WrapperImg>
@@ -25,20 +21,6 @@ function App() {
           e Mobile
         </S.About>
       </S.WrapperDesc>
-      {/* <S.WrapperInfo>
-        <S.WrapperInfoText>
-          <S.TextNumbers>37</S.TextNumbers>
-          <S.Text>SEGUIDORES</S.Text>
-        </S.WrapperInfoText>
-        <S.WrapperInfoText>
-          <S.TextNumbers>+2 ANOS</S.TextNumbers>
-          <S.Text>EXPERIÊNCIA</S.Text>
-        </S.WrapperInfoText>
-        <S.WrapperInfoText>
-          <S.TextNumbers>+30</S.TextNumbers>
-          <S.Text>PROJETOS</S.Text>
-        </S.WrapperInfoText>
-      </S.WrapperInfo> */}
       <S.WrapperButtons>
         <Button style={{
           'background': 'linear-gradient(45deg, #1da1f2, #0e71c8)'

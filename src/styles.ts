@@ -57,26 +57,6 @@ export const WrapperLocation = styled.div`
   padding-bottom: 1.2rem;
 `;
 
-export const WrapperInfo = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const WrapperInfoText = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 1.2rem;
-`;
-
-export const TextNumbers = styled.p`
-  font-size: 1.1em;
-  padding-bottom: 0.8rem;
-  font-family: "Nunito", sans-serif;
-  color: #111;
-  font-weight: bold;
-`;
-
 export const WrapperSocial = styled.div`
   display: flex;
   align-items: center;
