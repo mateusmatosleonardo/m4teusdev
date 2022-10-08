@@ -12,3 +12,11 @@ body{
   align-items: center;
   background: linear-gradient(45deg, #a9f1df, #ffbbbb);
 }
+
+@media (max-width: 500px)
+{
+  body
+   {
+    padding: 2rem;
+   }
+}
