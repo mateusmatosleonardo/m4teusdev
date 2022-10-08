@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Btn = styled.a`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
-  min-width: 162px;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  min-width: 180px;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
   border: none;
   border-radius: 16px;
   font-family: "Nunito", sans-serif;
