@@ -1,55 +1,57 @@
-import * as S from './styles';
+import * as Style from './styles';
 import { FaInstagram } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
-import Me from './assets/me.png';
-import Button from './components/Button';
+import { useTranslation, initReactI18next } from "react-i18next";
+import i18n from "i18next";
+import Me from './assets/me.jpeg';
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translation: {
+          "Description": "Hello, I'm Mateus! Computer science student and mobile developer with React Native. 🤓",
+        }
+      },
+      pt: {
+        translation: {
+          "Description": "Olá, eu sou Mateus! Estudante de ciência da computação e desenvolvedor mobile com React Native. 🤓",
+        }
+      }
+    },
+    lng: "en",
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 function App() {
 
+  const { t } = useTranslation();
+
   return (
-    <S.Container>
-      <S.WrapperImg>
-        <S.Img src={Me} alt="autor" />
-      </S.WrapperImg>
-      <S.WrapperDesc>
-        <S.Title>Mateus Leonardo</S.Title>
-        <S.SubTitle>Software Developer</S.SubTitle>
-        <S.About>Estudante de ciência da computação,
-          com uma gama de certificações no ramo da tecnologia e com mais
-          de 2 anos de experiência profissional como desenvolvedor Front-End
-          e Mobile
-        </S.About>
-      </S.WrapperDesc>
-      <S.WrapperButtons>
-        <Button style={{
-          'background': 'linear-gradient(45deg, #1da1f2, #0e71c8)'
-        }} title='Entrar em contato' />
-      </S.WrapperButtons>
-      <S.WrapperSocial>
-        <a href="https://www.instagram.com/m4teus_leonardo/">
-          <S.BgIcon style={{
-            'background': 'linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)'
-          }}>
-            <FaInstagram color='#fafafa' />
-          </S.BgIcon>
-        </a>
-        <a href="https://www.linkedin.com/in/mateusmatosleonardo/">
-          <S.BgIcon style={{
-            'background': 'linear-gradient(45deg, #1da1f2, #0e71c8)'
-          }}>
-            <FaLinkedinIn color='#fafafa' />
-          </S.BgIcon>
-        </a>
-        <a href="https://github.com/mateusmatosleonardo">
-          <S.BgIcon style={{
-            'background': 'linear-gradient(45deg, #333333, #626b73)'
-          }}>
-            <FaGithub color='#fafafa' />
-          </S.BgIcon>
-        </a>
-      </S.WrapperSocial>
-    </S.Container>
+    <Style.Container>
+      <Style.WrapperAvatar>
+        <Style.Avatar src={Me} />
+      </Style.WrapperAvatar>
+      <Style.Description>
+        {t('Description')}
+      </Style.Description>
+      <Style.WrapperSocialIcons>
+        <Style.IconLink href='https://www.linkedin.com/in/mateusmatosleonardo'>
+          <FaLinkedinIn size={40} color='#fafafa' />
+        </Style.IconLink>
+        <Style.IconLink href='https://github.com/mateusmatosleonardo'>
+          <FaGithub size={40} color='#fafafa' />
+        </Style.IconLink>
+        <Style.IconLink href='https://instagram.com/m4teus.dev?igshid=MzNlNGNkZWQ4Mg=='>
+          <FaInstagram size={40} color='#fafafa' />
+        </Style.IconLink>
+      </Style.WrapperSocialIcons>
+    </Style.Container>
   )
 }
 
