@@ -15,7 +15,8 @@ const About = ({ darkMode }: any) => {
                 <p className="mb-4">
                   As a computer science student, I am passionate about exploring the thrilling world of technology and learning about its boundless possibilities.
                 </p>
-                <p className="font-bold">Technology is the key that unlocks the infinite potential of the human imagination. 💙</p></div>
+                <p className="font-bold">Technology is the key that unlocks the infinite potential of the human imagination. 💙</p>
+              </div>
             </div>
             <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10 drop-shadow-xl flex justify-center">
               <img
@@ -32,6 +33,3 @@ const About = ({ darkMode }: any) => {
 };
 
 export default About;
-
-
-
