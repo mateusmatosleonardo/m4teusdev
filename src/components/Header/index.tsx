@@ -8,7 +8,10 @@ const Header = ({ darkMode, setDarkMode }: any) => {
   };
 
   return (
-    <div className={`w-full ${darkMode ? 'bg-zinc-800 text-dark-text' : ''}`}>
+    <div
+      style={{
+        transition: 'background-color 0.2s ease, color 0.2s ease'
+      }}>
       <div className="container px-4 py-6 mx-auto lg:max-w-4xl flex items-center justify-between ">
         <h1 className={`font-medium tracking-wider transition-colors text-gray-900 ${darkMode ? 'text-white' : ''} hover:text-blue-500 uppercase dark:text-white cursor-pointer`}>
           Mateus Dev
