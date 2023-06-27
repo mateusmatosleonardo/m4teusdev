@@ -20,7 +20,7 @@ const About = ({ darkMode }: any) => {
             </div>
             <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10 drop-shadow-xl flex justify-center">
               <img
-                src="/src/assets/me.jpeg"
+                src="./src/assets/me.jpeg"
                 className="rounded-full w-52 h-52 sm:w-60 sm:h-60 object-cover shadow-lg dark:shadow-none dark:bg-gray-800"
                 alt="Profile"
               />
