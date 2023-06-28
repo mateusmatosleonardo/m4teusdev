@@ -8,12 +8,9 @@ const Header = ({ darkMode, setDarkMode }: any) => {
   };
 
   return (
-    <div
-      style={{
-        transition: 'background-color 0.2s ease, color 0.2s ease'
-      }}>
+    <div>
       <div className="container px-4 py-6 mx-auto lg:max-w-4xl flex items-center justify-between ">
-        <h1 className={`font-medium tracking-wider transition-colors text-gray-900 ${darkMode ? 'text-white' : ''} hover:text-blue-500 uppercase dark:text-white cursor-pointer`}>
+        <h1 className={`font-medium tracking-wider transition-colors text-gray-900 ${darkMode ? 'text-white' : ''} hover:text-blue-500 uppercase cursor-pointer`}>
           Mateus Dev
         </h1>
         <button onClick={toggleDarkMode}>
