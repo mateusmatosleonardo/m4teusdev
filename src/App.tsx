@@ -6,9 +6,9 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={`w-full ${darkMode ? 'bg-zinc-800' : ''} bg-white h-screen`}
+    <div className={`w-full min-h-screen ${darkMode ? 'bg-zinc-800' : ''} bg-white`}
       style={{
-        transition: 'background-color 0.2s ease, color 0.2s ease'
+        transition: 'background-color 0.3s ease, color 0.3s ease'
       }}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <About darkMode={darkMode} />
