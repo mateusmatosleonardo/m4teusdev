@@ -8,7 +8,7 @@ const Header = ({ darkMode, setDarkMode }: any) => {
   };
 
   return (
-    <div>
+    <header>
       <div className="container px-4 py-6 mx-auto lg:max-w-4xl flex items-center justify-between ">
         <h1 className={`font-medium tracking-wider transition-colors text-gray-900 ${darkMode ? 'text-white' : ''} hover:text-blue-500 uppercase cursor-pointer`}>
           Mateus Dev
@@ -19,7 +19,7 @@ const Header = ({ darkMode, setDarkMode }: any) => {
             <FaMoon size={22} className="text-gray-800" />}
         </button>
       </div>
-    </div>
+    </header>
   )
 }
 
