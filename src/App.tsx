@@ -1,19 +1,17 @@
-import { useState } from "react";
-import { About, Footer, Header } from "./components"
+import { Hero, Footer, Header, Nav, About } from './components'
 
 function App() {
 
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <main className={`w-full min-h-screen ${darkMode ? 'bg-zinc-800' : ''} bg-white`}
-      style={{
-        transition: 'background-color 0.3s ease, color 0.3s ease'
-      }}>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <About darkMode={darkMode} />
-      <Footer darkMode={darkMode} />
-    </main>
+    <div className="flex bg-zinc-900">
+      <Nav />
+      <main className={'w-full min-h-screen bg-zinc-900'}>
+        <Header />
+        <Hero />
+        <About />
+        <Footer />
+      </main>
+    </div>
   )
 }
 
