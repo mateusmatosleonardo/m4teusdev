@@ -17,6 +17,8 @@
     "@typescript-eslint/space-before-function-paren": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/semi": "off",
     "padded-blocks": "off",
     "semi": "warn",
     "quotes": ["error", "single"]
