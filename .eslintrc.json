@@ -20,7 +20,8 @@
     "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/semi": "off",
     "padded-blocks": "off",
-    "semi": "warn",
-    "quotes": ["error", "single"]
+    "semi": "off",
+    "quotes": ["off", "single"],
+    "@typescript-eslint/comma-dangle": "off"
   }
 }
