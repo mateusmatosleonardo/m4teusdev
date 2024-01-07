@@ -2,7 +2,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center items-center mt-2 sm:mt-32 sm:pb-36 sm:py-12 py-6">
+    <footer className="flex justify-center items-center mt-2 sm:mt-24 sm:pb-36 sm:py-12 py-6">
       <div className="flex flex-col justify-center items-center w-full max-w-3xl gap-y-10">
         <h1 className="text-8xl text-white font-bold">
           Contato
