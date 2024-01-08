@@ -1,25 +1,35 @@
 import Section from '../Section'
+import { list } from './content'
 
 const Experience = () => {
   return (
     <Section title="Experiência">
-      <div className='flex flex-col gap-y-4 w-full mt-8'>
-        <div className='flex justify-between items-center'>
-          <span className='text-2xl font-bold'>Arkos</span>
-          <span className='text-lg'>2021 - 2022</span>
+      {list.map((item, i) => (
+        <div className='flex flex-col gap-y-4 w-full mt-8' key={i}>
+          <div className='flex justify-between items-center'>
+            <div className='flex items-center gap-x-2'>
+              <img
+                src={item.logo}
+                alt={`${item.company} logo`}
+                className='w-12 h-12 rounded-full object-contain'
+              />
+              <span className='text-2xl font-bold'>{item.company}</span>
+            </div>
+            <span className='text-lg'>{item.date}</span>
+          </div>
+          <span className='text-xl text-blue-500 font-bold'>
+            {item.office}
+          </span>
+          <span className='text-lg text-gray-400 font-light'>
+            {item.description}
+          </span>
+          <div className='flex gap-x-2'>
+            {item.technologiesUsed.map((tech, i) => (
+              <span className='bg-rgba py-1 px-2 rounded-full' key={i}>{tech}</span>
+            ))}
+          </div>
         </div>
-        <span className='text-xl text-blue-500 font-bold'>
-          Desenvolvedor Front-end
-        </span>
-        <span className='text-lg text-gray-400 font-light'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum excepturi velit porro minima. Doloremque nisi adipisci illo corrupti officiis suscipit hic distinctio commodi eum error. Dolores rerum velit autem.
-        </span>
-        <div className='flex gap-x-2'>
-          <span className='bg-rgba py-1 px-2 rounded-full'>React</span>
-          <span className='bg-rgba py-1 px-2 rounded-full'>React Native</span>
-          <span className='bg-rgba py-1 px-2 rounded-full'>Next.js</span>
-        </div>
-      </div>
+      ))}
     </Section>
   )
 }
